@@ -16,7 +16,7 @@ import AppBarList from "../../list/appbar";
 import SmartContracts from "./SmartContracts";
 import Documents from "./Documents";
 import Web3ContextProvider from "../../context/Web3Context";
-import '../../assets/styles.css';
+import "../../assets/styles.css";
 
 const useStyles = makeStyles((theme) => ({
 	root: {

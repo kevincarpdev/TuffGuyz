@@ -1,63 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt&family=Rammetto+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt&family=Rammetto+One&display=swap");
 body {
-    font-family: 'Prompt', sans-serif;
-    color: #fff;
+	font-family: "Prompt", sans-serif;
+	color: #fff;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Rammetto One', cursive;
-    color: #fff;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Rammetto One", cursive;
+	color: #fff;
 }
 
 #container {
-    position: relative;
-    margin:auto;
-    width: 1000px;
-    height: 1123px;
+	position: relative;
+	margin: auto;
+	width: 1000px;
+	height: 1123px;
 }
 
 #body {
-    position:absolute;
-    z-index: 1;
-    width:794px;   /* width of actual image */
-    height:1123px; /* height of actual image */
-    background-image: url("../img/body.png");
-    background-repeat: no-repeat;
+	position: absolute;
+	z-index: 1;
+	width: 794px; /* width of actual image */
+	height: 1123px; /* height of actual image */
+	background-image: url("../img/body.png");
+	background-repeat: no-repeat;
 }
 
 #controls {
-    position: absolute;
-    right: auto;
-    left: auto;
-    top: auto;
-    bottom: auto;
-    z-index: 3;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
-    padding: 1em 0;
+	position: absolute;
+	right: auto;
+	left: auto;
+	top: auto;
+	bottom: auto;
+	z-index: 3;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 10px;
+	padding: 1em 0;
 }
 
-#eyes, #ears, #nose, #mouth, #clothes {
-    position:absolute;
-    z-index: 1;
-    width:794px;   /* width of actual image */
-    height:1123px; /* height of actual image */
+#eyes,
+#ears,
+#nose,
+#mouth,
+#clothes {
+	position: absolute;
+	z-index: 1;
+	width: 794px; /* width of actual image */
+	height: 1123px; /* height of actual image */
 }
 
 // update this map when new items or categories are added
-$items: ("eyes": 9, "ears": 3, "mouth": 4, "nose": 3, "clothes": 3);
+$items: (
+	"eyes": 9,
+	"ears": 3,
+	"mouth": 4,
+	"nose": 3,
+	"clothes": 3,
+);
 
 @each $item, $total in $items {
-
-    @for $i from 1 through $total {
-        .#{$item}#{$i} {
-            background-image: url(../img/#{$item}/#{$item}#{$i}.png);
-        }
-    }
+	@for $i from 1 through $total {
+		.#{$item}#{$i} {
+			background-image: url(../img/#{$item}/#{$item}#{$i}.png);
+		}
+	}
 }
 
 // Position "next" buttons
@@ -65,20 +79,18 @@ $items: ("eyes": 9, "ears": 3, "mouth": 4, "nose": 3, "clothes": 3);
 $height: 410px;
 
 @each $item, $total in $items {
+	$height: $height + 30px;
 
-    $height: $height + 30px;
-
-    #next#{$item}{
-        position:relative;
-        z-index: 3;
-    }
-    
+	#next#{$item} {
+		position: relative;
+		z-index: 3;
+	}
 }
 
 // Position "randomize" button
 
-#randomize{
-    position:relative;
-    z-index: 3;
-    font-weight: bold;
+#randomize {
+	position: relative;
+	z-index: 3;
+	font-weight: bold;
 }

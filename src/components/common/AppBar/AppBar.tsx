@@ -7,9 +7,9 @@ import { OverridableComponent } from "@material-ui/core/OverridableComponent";
 import { SvgIconTypeMap } from "@material-ui/core/SvgIcon/SvgIcon";
 import { Web3Context } from "../../../context/Web3Context";
 import Logo from "../../../assets/img/logo.png";
-import s from './AppBar.module.css'
-import cn from 'classnames'
-import throttle from 'lodash.throttle'
+import s from "./AppBar.module.css";
+import cn from "classnames";
+import throttle from "lodash.throttle";
 
 interface MenuType {
 	name: string;
@@ -149,30 +149,29 @@ export default function CustomAppBar(
 			// Open the Drawer Submenu on path
 		}
 	}, [openAppbar]);
-	const [hasScrolled, setHasScrolled] = useState(false)
+	const [hasScrolled, setHasScrolled] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = throttle(() => {
-			const offset = 0
-			const { scrollTop } = document.documentElement
-			const scrolled = scrollTop > offset
+			const offset = 0;
+			const { scrollTop } = document.documentElement;
+			const scrolled = scrollTop > offset;
 
 			if (hasScrolled !== scrolled) {
-				setHasScrolled(scrolled)
+				setHasScrolled(scrolled);
 			}
-		}, 200)
+		}, 200);
 
-		document.addEventListener('scroll', handleScroll)
+		document.addEventListener("scroll", handleScroll);
 		return () => {
-			document.removeEventListener('scroll', handleScroll)
-		}
-	}, [hasScrolled])
+			document.removeEventListener("scroll", handleScroll);
+		};
+	}, [hasScrolled]);
 
 	return (
 		<>
-			<div className={cn(s.menuBar, { 'shadow-magical': hasScrolled })}>
-
-				<img src={Logo} alt="Tuff Guys" className='logo' />
+			<div className={cn(s.menuBar, { "shadow-magical": hasScrolled })}>
+				<img src={Logo} alt="Tuff Guys" className="logo" />
 				<div className="wallet">
 					<Typography className={classes.blockchainText}>
 						{/* {blockchainName ? blockchainName : ""} */}
