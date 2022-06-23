@@ -11,7 +11,7 @@ import { navigate, RouteComponentProps } from "@reach/router";
 import { useSnackbar } from "notistack";
 import { Web3Provider } from "react-moralis/lib/hooks/useMoralis/_useMoralisWeb3";
 import { AuthType } from "react-moralis/lib/hooks/useMoralis/_useMoralisAuth";
-import Logo from "../../assets/moralis-logo.svg";
+import Logo from "../../assets/img/logo.png";
 
 interface LoginType {
 	username: string;
@@ -89,7 +89,7 @@ export default function Login(_props: RouteComponentProps): JSX.Element {
 			...options(),
 			signingMessage: "React Moralis Crypto Login",
 			onSuccess: () => {
-				navigate("/dashboard");
+				navigate("/fuse");
 			},
 			onError: () => {
 				enqueueSnackbar("Crypto Login Failed.", { variant: "error" });
@@ -113,7 +113,7 @@ export default function Login(_props: RouteComponentProps): JSX.Element {
 		setLoadingButton({ ...loadingButton, email: true });
 		await login(username, password, {
 			onSuccess: () => {
-				navigate("/dashboard");
+				navigate("/fuse");
 			},
 			onError: () => {
 				enqueueSnackbar("Email Login Failed.", { variant: "error" });

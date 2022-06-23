@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&family=Rammetto+One&display=swap');
+@import './base.css';
+@import './components.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;

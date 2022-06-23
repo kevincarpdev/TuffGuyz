@@ -1,28 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
 import PropTypes, { InferProps } from "prop-types";
 import { navigate, useLocation } from "@reach/router";
-import clsx from "clsx";
-import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
-import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
-import IconButton from "@material-ui/core/IconButton";
-import Divider from "@material-ui/core/Divider";
-import Drawer from "@material-ui/core/Drawer";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import List from "@material-ui/core/List";
-import Collapse from "@material-ui/core/Collapse";
 import { OverridableComponent } from "@material-ui/core/OverridableComponent";
 import { SvgIconTypeMap } from "@material-ui/core/SvgIcon/SvgIcon";
-import { Web3Context } from "../../context/Web3Context";
-import SubmenuArrow from "./SubmenuArrow";
+import { Web3Context } from "../../../context/Web3Context";
+import Logo from "../../../assets/img/logo.png";
+import s from './AppBar.module.css'
+import cn from 'classnames'
+import throttle from 'lodash.throttle'
 
 interface MenuType {
 	name: string;
@@ -162,33 +149,41 @@ export default function CustomAppBar(
 			// Open the Drawer Submenu on path
 		}
 	}, [openAppbar]);
+	const [hasScrolled, setHasScrolled] = useState(false)
+
+	useEffect(() => {
+		const handleScroll = throttle(() => {
+			const offset = 0
+			const { scrollTop } = document.documentElement
+			const scrolled = scrollTop > offset
+
+			if (hasScrolled !== scrolled) {
+				setHasScrolled(scrolled)
+			}
+		}, 200)
+
+		document.addEventListener('scroll', handleScroll)
+		return () => {
+			document.removeEventListener('scroll', handleScroll)
+		}
+	}, [hasScrolled])
 
 	return (
 		<>
-			<AppBar position="fixed" className={classes.appBar}>
-				<Toolbar>
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						onClick={() => setOpenAppbar(!openAppbar)}
-						edge="start"
-						className={classes.menuButton}
-					>
-						{openAppbar ? <CloseIcon /> : <MenuIcon />}
-					</IconButton>
-					<Typography variant="h6" noWrap className={classes.title}>
-						Dashboard
-					</Typography>
+			<div className={cn(s.menuBar, { 'shadow-magical': hasScrolled })}>
+
+				<img src={Logo} alt="Tuff Guys" className='logo' />
+				<div className="wallet">
 					<Typography className={classes.blockchainText}>
-						{blockchainName ? blockchainName : ""}
+						{/* {blockchainName ? blockchainName : ""} */}
 						{web3Accounts.length > 0 && ` (${web3Accounts[0]})`}
 					</Typography>
-					<Button color="inherit" variant="outlined" onClick={onLogout}>
+					<button className="button" onClick={onLogout}>
 						Logout
-					</Button>
-				</Toolbar>
-			</AppBar>
-			<Drawer
+					</button>
+				</div>
+			</div>
+			{/* <Drawer
 				variant="permanent"
 				className={clsx(classes.drawer, {
 					[classes.drawerOpen]: openAppbar,
@@ -281,7 +276,7 @@ export default function CustomAppBar(
 						);
 					})}
 				</List>
-			</Drawer>
+			</Drawer> */}
 		</>
 	);
 }

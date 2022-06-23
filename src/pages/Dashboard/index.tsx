@@ -7,16 +7,16 @@ import {
 	useLocation,
 	RouteComponentProps,
 } from "@reach/router";
-import AppBar from "../../components/AppBar";
+import AppBar from "../../components/common/AppBar";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Dashboard from "./Dashboard";
-import Plugins from "./Plugins";
 import Settings from "./Settings";
 import AppBarList from "../../list/appbar";
 import SmartContracts from "./SmartContracts";
 import Documents from "./Documents";
 import Web3ContextProvider from "../../context/Web3Context";
+import '../../assets/styles.css';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -26,13 +26,11 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "flex-end",
-		padding: theme.spacing(0, 1),
 		// necessary for content to be below app bar
 		...theme.mixins.toolbar,
 	},
 	mainContent: {
 		flexGrow: 1,
-		padding: theme.spacing(3),
 		marginTop: theme.spacing(12),
 	},
 	routerContainer: {
@@ -64,7 +62,7 @@ export default function Index(_props: RouteComponentProps): JSX.Element {
 
 	useEffect(() => {
 		if (pathname === "/") {
-			navigate("/dashboard");
+			navigate("/fuse");
 		}
 	}, [pathname]);
 
@@ -76,8 +74,7 @@ export default function Index(_props: RouteComponentProps): JSX.Element {
 				<main className={classes.mainContent}>
 					<div className={classes.toolbar}>
 						<Router className={classes.routerContainer}>
-							<Dashboard path="dashboard" user={user} />
-							<Plugins path="plugins" />
+							<Dashboard path="fuse" user={user} />
 							<Settings
 								path="settings"
 								user={user}

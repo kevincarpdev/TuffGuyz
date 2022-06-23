@@ -1,0 +1,61 @@
+:root {
+  --primary: #ffffff;
+  --primary-2: #f1f3f5;
+  --secondary: #353535;
+  --secondary-2: #111;
+  --selection: var(--cyan);
+  --font-sans: 'Oswald', serif;
+  --font-serif: 'PT Sans', sans-serif;
+  --font-normal: 400;
+  --font-bold: 800;
+  --font-light: 300;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary);
+  color: var(--text-primary);
+  overscroll-behavior-x: none;
+  font-family: 'Prompt', sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  color: #fff;
+}
+#root {
+  background-color: #ff5858;
+  min-height: 100vh;
+}
+
+
+p {
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Rammetto One', cursive;
+}

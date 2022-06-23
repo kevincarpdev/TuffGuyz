@@ -1,44 +1,31 @@
-# Moralis React Template
+# Tuff Guys
 
-This is the unofficial Moralis React Template to have a quickstart building Web 3.0 applications.
+## Requirements
+1. Replicate this site: https://tuffguysnft.com/fuse
+
+### Basic Overview
+1. Enable user to connect to site via web3
+2. Display NFTs from a specific collection on bottom
+3. Allow user to select 3 to "fuse" into 1 NFT (This new NFT must be minted from the same contract, but with the URI + metadata for the image being generated in real-time via an API you've created.)
+
+### API
+The API:
+1. Must have access to a database containing the Tuffs' visual assets so that they may be stacked according to the specs provided by the user on the front-end interface
+2. Once the image is created, it must be hosted at an endpoint which is returned and used as the argument for the "image url" parameter of the NFT being minted by the user
 
 -----
-### Requirements
+### Setup
 
-1. Node.JS
-2. Moralis Account
-3. Netlify CLI (Optional)
-
------
-### Setups
-
-1. Clone the project
+1. Install dependencies
 
 ```bash
-git clone https://github.com/YosephKS/moralis-react-template.git
-```
-
-2. Install dependencies
-
-```bash
-## Using NPM
-npm install
-
-## Using yarn
 yarn
 ```
 
 3. Run the app
 
 ```bash
-## Using npm
-npm start
-
-## Using yarn
 yarn start
 ```
 
 -----
-### License
-
-[MIT LICENSE](https://github.com/YosephKS/moralis-react-template/blob/main/LICENSE)
