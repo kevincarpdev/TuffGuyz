@@ -171,14 +171,20 @@ export default function CustomAppBar(
 	return (
 		<>
 			<div className={cn(s.menuBar, { "shadow-magical": hasScrolled })}>
-				<img src={Logo} alt="Tuff Guys" className="logo" />
+				<a href="/"><img src={Logo} alt="Tuff Guys" className="logo" /></a>
+				<div className={s.mainNav}>
+					<ul className={s.mainNavList}>
+						<li><a href="/fuse">Fuse</a></li>
+						<li><a href="/#about">About</a></li>
+						<li><a href="/#roadmap">Roadmap</a></li>
+						<li><a href="/#traits">Traits</a></li>
+						<li><a href="/#team">Team</a></li>
+						<li><a href="/#contact">Contact</a></li>
+					</ul>
+				</div>
 				<div className="wallet">
-					<Typography className={classes.blockchainText}>
-						{/* {blockchainName ? blockchainName : ""} */}
-						{web3Accounts.length > 0 && ` (${web3Accounts[0]})`}
-					</Typography>
 					<button className="button" onClick={onLogout}>
-						Logout
+						{web3Accounts.length > 0 && ` (${web3Accounts[0]})`}
 					</button>
 				</div>
 			</div>

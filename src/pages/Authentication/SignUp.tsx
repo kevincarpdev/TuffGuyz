@@ -65,7 +65,7 @@ export default function SignUp(_props: RouteComponentProps): JSX.Element {
 			{
 				onSuccess: () => {
 					enqueueSnackbar("Sign Up Successful.", { variant: "success" });
-					navigate("/fuse");
+					navigate("/main");
 				},
 				onError: () => {
 					enqueueSnackbar("Sign Up Failed.", { variant: "error" });

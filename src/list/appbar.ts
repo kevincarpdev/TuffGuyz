@@ -7,9 +7,9 @@ import DocumentsIcon from "@material-ui/icons/InsertDriveFile";
 const AppBarList = {
 	top: [
 		{
-			name: "fuse",
-			link: "fuse",
-			title: "Fuse",
+			name: "main",
+			link: "main",
+			title: "Main",
 			icon: DashboardIcon,
 		},
 		{

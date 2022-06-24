@@ -1,88 +1,50 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes, { InferProps } from "prop-types";
-import Grid from "@material-ui/core/Grid";
 import { RouteComponentProps } from "@reach/router";
-import "../../assets/scss/_tuff.scss";
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import Hero from "../../components/modules/Hero";
+import Mission from "../../components/modules/Mission";
 
 export default function Dashboard(
 	props: InferProps<typeof Dashboard.propTypes> & RouteComponentProps,
 ): JSX.Element {
-	const { user } = props;
-
-	function next(item) {
-		const next_num = dressupState[item].current + 1;
-		// if next_num exceeds total, restart (set current to 0)
-		const new_current = next_num < dressupState[item].total ? next_num : 0;
-		updateDressUp(item, new_current);
-	}
-
-	function updateDressUp(item, new_current) {
-		setDressupState({
-			...dressupState,
-			[item]: {
-				current: (dressupState[item].current = new_current),
-				total: dressupState[item].total,
-			},
-		});
-	}
-
-	function randomize() {
-		Object.keys(dressupState).map((item) =>
-			updateDressUp(
-				item,
-				Math.floor(Math.random() * Math.floor(dressupState[item].total)),
-			),
-		);
-	}
-	const [dressupState, setDressupState] = useState({
-		eyes: { current: 0, total: 9 },
-		ears: { current: 0, total: 3 },
-		mouth: { current: 0, total: 4 },
-		nose: { current: 0, total: 3 },
-		clothes: { current: 0, total: 3 },
-	});
-
 	return (
-		<Grid
-			className="container"
-			container
-			direction="column"
-			alignItems="center"
-			justifyContent="center"
-		>
-			<h2>Hi {user.get("username")}!</h2>
-			<h1>Tuff Guys Fuse</h1>
-			<div id="container">
-				<div id="body"></div>
-				{Object.keys(dressupState).map((item) => (
-					<div
-						id={item}
-						className={item + (dressupState[item].current + 1)}
-						key={item}
-					></div>
-				))}
-				<div id="controls">
-					<h4>Choose Your Traits</h4>
-					{Object.keys(dressupState).map((item) => (
-						<input
-							className="button"
-							type="button"
-							value={"next " + item}
-							key={item}
-							id={"next" + item}
-							onClick={() => next(item)}
-						/>
-					))}
-					<input
-						className="button"
-						type="button"
-						value="RANDOMIZE"
-						id="randomize"
-						onClick={() => randomize()}
-					/>
-				</div>
-			</div>
-		</Grid>
+		<>
+			<Parallax pages={5} style={{ top: '0', left: '0' }}>
+				<ParallaxLayer
+					offset={0}
+					speed={2.5}
+					style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+					<Hero />
+				</ParallaxLayer>
+				<ParallaxLayer
+					offset={1}
+					speed={3}
+					style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+						<Mission />
+						
+						<h4>RoadMap</h4>
+				</ParallaxLayer>
+				<ParallaxLayer
+					offset={2}
+					speed={1.5}
+					style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgb(236, 240, 244)', color: '#000' }}>
+						<h3>Utility</h3>
+				</ParallaxLayer>
+				<ParallaxLayer
+					offset={3}
+					speed={0.5}
+					style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#3a3d5e' }}>
+						<h3>Rarity</h3>
+					</ParallaxLayer>
+				<ParallaxLayer
+					offset={4}
+					speed={2.5}
+					style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgb(236, 240, 244)', color: '#000' }}>
+					<h3>Meet The Team</h3>
+				</ParallaxLayer>
+			</Parallax>
+		</>
 	);
 }
 

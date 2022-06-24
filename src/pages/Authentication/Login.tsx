@@ -89,7 +89,7 @@ export default function Login(_props: RouteComponentProps): JSX.Element {
 			...options(),
 			signingMessage: "React Moralis Crypto Login",
 			onSuccess: () => {
-				navigate("/fuse");
+				navigate("/main");
 			},
 			onError: () => {
 				enqueueSnackbar("Crypto Login Failed.", { variant: "error" });
@@ -113,7 +113,7 @@ export default function Login(_props: RouteComponentProps): JSX.Element {
 		setLoadingButton({ ...loadingButton, email: true });
 		await login(username, password, {
 			onSuccess: () => {
-				navigate("/fuse");
+				navigate("/main");
 			},
 			onError: () => {
 				enqueueSnackbar("Email Login Failed.", { variant: "error" });

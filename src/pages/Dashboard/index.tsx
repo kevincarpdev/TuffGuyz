@@ -15,6 +15,7 @@ import Settings from "./Settings";
 import AppBarList from "../../list/appbar";
 import SmartContracts from "./SmartContracts";
 import Documents from "./Documents";
+import Fuse from "./Fuse";
 import Web3ContextProvider from "../../context/Web3Context";
 import "../../assets/styles.css";
 
@@ -62,7 +63,7 @@ export default function Index(_props: RouteComponentProps): JSX.Element {
 
 	useEffect(() => {
 		if (pathname === "/") {
-			navigate("/fuse");
+			navigate("/main");
 		}
 	}, [pathname]);
 
@@ -74,7 +75,8 @@ export default function Index(_props: RouteComponentProps): JSX.Element {
 				<main className={classes.mainContent}>
 					<div className={classes.toolbar}>
 						<Router className={classes.routerContainer}>
-							<Dashboard path="fuse" user={user} />
+							<Dashboard path="main" user={user} />
+							<Fuse path="fuse" />
 							<Settings
 								path="settings"
 								user={user}

@@ -4,8 +4,8 @@
 	--secondary: #353535;
 	--secondary-2: #111;
 	--selection: var(--cyan);
-	--font-sans: "Oswald", serif;
-	--font-serif: "PT Sans", sans-serif;
+	--font-sans: "Rammetto One", cursive;
+	--font-serif: "Prompt", sans-serif;
 	--font-normal: 400;
 	--font-bold: 800;
 	--font-light: 300;
@@ -34,7 +34,8 @@ body {
 	background-color: var(--primary);
 	color: var(--text-primary);
 	overscroll-behavior-x: none;
-	font-family: "Prompt", sans-serif;
+	font-family:var (--font-serif);
+	min-height: 100vh;
 }
 
 body {
@@ -42,6 +43,8 @@ body {
 	min-height: 100%;
 	margin: 0;
 	color: #fff;
+	background-color: #ff5858;
+	min-height: 100vh;
 }
 #root {
 	background-color: #ff5858;
@@ -56,5 +59,9 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: "Rammetto One", cursive;
+	font-family: var(--font-sans);
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }

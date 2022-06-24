@@ -14,13 +14,17 @@ button {
 	border-radius: 5px;
 	border: 2px solid #fff;
 	padding: 0.5em 2em;
+	
 }
 .button {
 	background-color: transparent;
 	border-color: #fff;
 	border-radius: 5px;
-	border: 2px solid;
+	border: 2px solid #fff;
 	padding: 0.5em 2em;
+	color: #fff;
+	font-family: var(--font-serif);
+	font-weight: 500;
 }
 .button:hover {
 	background-color: #fff;
