@@ -34,7 +34,7 @@ body {
 	background-color: var(--primary);
 	color: var(--text-primary);
 	overscroll-behavior-x: none;
-	font-family:var (--font-serif);
+	font-family: var (--font-serif);
 	min-height: 100vh;
 }
 

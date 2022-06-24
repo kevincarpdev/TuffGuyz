@@ -55,7 +55,6 @@ export default function Fuse(
 		clothes: { current: 0, total: 3 },
 	});
 
-
 	return (
 		<Grid
 			className="container"

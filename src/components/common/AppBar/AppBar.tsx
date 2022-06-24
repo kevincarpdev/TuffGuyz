@@ -171,15 +171,29 @@ export default function CustomAppBar(
 	return (
 		<>
 			<div className={cn(s.menuBar, { "shadow-magical": hasScrolled })}>
-				<a href="/"><img src={Logo} alt="Tuff Guys" className="logo" /></a>
+				<a href="/">
+					<img src={Logo} alt="Tuff Guys" className="logo" />
+				</a>
 				<div className={s.mainNav}>
 					<ul className={s.mainNavList}>
-						<li><a href="/fuse">Fuse</a></li>
-						<li><a href="/#about">About</a></li>
-						<li><a href="/#roadmap">Roadmap</a></li>
-						<li><a href="/#traits">Traits</a></li>
-						<li><a href="/#team">Team</a></li>
-						<li><a href="/#contact">Contact</a></li>
+						<li>
+							<a href="/fuse">Fuse</a>
+						</li>
+						<li>
+							<a href="/#about">About</a>
+						</li>
+						<li>
+							<a href="/#roadmap">Roadmap</a>
+						</li>
+						<li>
+							<a href="/#traits">Traits</a>
+						</li>
+						<li>
+							<a href="/#team">Team</a>
+						</li>
+						<li>
+							<a href="/#contact">Contact</a>
+						</li>
 					</ul>
 				</div>
 				<div className="wallet">
