@@ -13,7 +13,7 @@ interface CardProps {
 	twitter?: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, subtitle, text, image }) => {
+const Card: React.FC<CardProps> = () => {
 	return (
 		<>
 			<div className={cn(s.root, "container")}>

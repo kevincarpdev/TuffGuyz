@@ -1,6 +1,4 @@
 import React from "react";
-import PropTypes, { InferProps } from "prop-types";
-import { RouteComponentProps } from "@reach/router";
 import Hero from "../../components/modules/Hero";
 import Timeline from "../../components/modules/Timeline";
 import Card from "../../components/modules/Card";
@@ -18,7 +16,6 @@ import ExtraImagesMarquee from "../../components/modules/ExtraImagesMarquee";
 // import Mission from "../../components/modules/Mission";
 
 export default function Dashboard(
-	props: InferProps<typeof Dashboard.propTypes> & RouteComponentProps,
 ): JSX.Element {
 	return (
 		<>
@@ -101,7 +98,3 @@ export default function Dashboard(
 		</>
 	);
 }
-
-Dashboard.propTypes = {
-	user: PropTypes.any.isRequired,
-};

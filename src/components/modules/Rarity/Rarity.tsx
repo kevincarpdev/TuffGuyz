@@ -1,18 +1,11 @@
 import React from "react";
-import PropTypes, { InferProps } from "prop-types";
 import s from "./Rarity.module.css";
 import cn from "classnames";
 import RarityImage from "../../../assets/img/rarity.png";
 
-interface HeroType {
-	name: string;
-	link: string;
-	title: string;
-}
+
 
 export default function Rarity(): JSX.Element {
-	// props: InferProps<typeof Hero.propTypes>,
-	// const { menu: menuList, onLogout } = props;
 	return (
 		<>
 			<section id="rarity" className={cn(s.root, "rarity")}>
@@ -60,11 +53,3 @@ export default function Rarity(): JSX.Element {
 		</>
 	);
 }
-
-Rarity.propTypes = {
-	menu: PropTypes.shape({
-		top: PropTypes.array.isRequired,
-		bottom: PropTypes.array.isRequired,
-	}).isRequired,
-	onLogout: PropTypes.func.isRequired,
-};

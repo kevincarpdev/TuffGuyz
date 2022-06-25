@@ -1,12 +1,9 @@
-import React, { useState, useMemo } from "react";
-import PropTypes, { InferProps } from "prop-types";
+import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
-import { useSnackbar } from "notistack";
-import { RouteComponentProps } from "@reach/router";
+// import { useSnackbar } from "notistack";
 import "../../assets/scss/_tuff.scss";
 
 export default function Fuse(
-	props: InferProps<typeof Fuse.propTypes> & RouteComponentProps,
 ): JSX.Element {
 	// const { user, setUserData, loading } = props;
 	// const { enqueueSnackbar } = useSnackbar();
@@ -96,9 +93,3 @@ export default function Fuse(
 		</Grid>
 	);
 }
-
-Fuse.propTypes = {
-	user: PropTypes.any.isRequired,
-	setUserData: PropTypes.func.isRequired,
-	loading: PropTypes.bool.isRequired,
-};
