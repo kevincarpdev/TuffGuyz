@@ -30,8 +30,43 @@ button {
 	color: #ff5858;
 	cursor: pointer;
 }
-
-/* Hero Module */
-/* .hero--content h1 {
-  @apply text-accent-0 font-semibold leading-none text-white;
-} */
+.flexColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3em 0;
+}
+.flexRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.off-white {
+	background-color: #ecf0f4;
+	color: #000;
+}
+section {
+	text-align: center;
+	padding: 4em 0;
+}
+section h2:first-of-type {
+	font-size: 2.3rem;
+	font-weight: 500;
+	color: #000;
+}
+.cardListing {
+	padding: 1em 0 3em;
+	text-align: center;
+}
+@media screen and (max-width: 1199px) {
+	.container{
+		padding: 0 2em;
+	}
+}
+@media screen and (max-width: 768px) {
+	.flexColumn, .flexRow {
+		flex-direction: column;
+	}
+}

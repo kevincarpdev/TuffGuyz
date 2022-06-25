@@ -13,11 +13,11 @@ interface HeroType {
 }
 
 export default function Hero(): JSX.Element {
-// props: InferProps<typeof Hero.propTypes>,
+	// props: InferProps<typeof Hero.propTypes>,
 	// const { menu: menuList, onLogout } = props;
 	return (
 		<>
-			<div id="about" className={cn(s.root)}>
+			<section id="about" className={cn(s.root)}>
 				<div className={s.hero}>
 					<div className="container">
 						<div className={s.heroWrap}>
@@ -38,7 +38,7 @@ export default function Hero(): JSX.Element {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 }

@@ -1,0 +1,13 @@
+.root {
+	position: relative;
+}
+.hero {
+	padding: 3em 0;
+}
+.heroWrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0 3em;
+}

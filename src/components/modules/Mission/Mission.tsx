@@ -13,11 +13,11 @@ interface HeroType {
 }
 
 export default function Mission(): JSX.Element {
-// props: InferProps<typeof Hero.propTypes>,
+	// props: InferProps<typeof Hero.propTypes>,
 	// const { menu: menuList, onLogout } = props;
 	return (
 		<>
-			<div id="mission" className={cn(s.root)}>
+			<section id="mission" className={cn(s.root)}>
 				<div className={s.hero}>
 					<div className="container">
 						<div className={s.heroWrap}>
@@ -27,7 +27,7 @@ export default function Mission(): JSX.Element {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 }
