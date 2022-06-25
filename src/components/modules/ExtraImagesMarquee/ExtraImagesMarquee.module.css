@@ -1,0 +1,8 @@
+.root {
+	position: relative;
+	padding: 0;
+}
+
+.marqueeImage {
+	max-width: 250px;
+}

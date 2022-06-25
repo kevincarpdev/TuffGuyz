@@ -43,18 +43,5 @@
 	.image {
 		max-width: 100%;
 	}
-	/* .tableRow {
-		flex-direction: column-reverse;
-		gap: 0 50px;
-		padding: 10px 0;
-		flex-basis: 50%;
-		border-bottom: 0;
-	}
-	.statTable {
-		max-width: 300px;
-		margin: 0 auto;
-	}
-	.tableRow .statHeader {
-		padding: 0;
-	} */
+	
 }

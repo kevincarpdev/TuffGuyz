@@ -12,6 +12,8 @@ import ToxtreplaImage from "../../assets/img/toxtrepla.png";
 import ZavImage from "../../assets/img/zav.png";
 import NickImage from "../../assets/img/nick.png";
 import JelloImage from "../../assets/img/jello.png";
+import Footer from "../../components/common/Footer";
+import ExtraImagesMarquee from "../../components/modules/ExtraImagesMarquee";
 
 // import Mission from "../../components/modules/Mission";
 
@@ -20,6 +22,7 @@ export default function Dashboard(
 ): JSX.Element {
 	return (
 		<>
+		<main>
 			<Hero />
 			{/* <Mission /> */}
 			<Timeline />
@@ -90,6 +93,12 @@ export default function Dashboard(
 					</div>
 				</div>
 			</section>
+		</main>
+		<footer>
+			<Footer />
+		</footer>
+		<ExtraImagesMarquee />
+		
 		</>
 	);
 }
