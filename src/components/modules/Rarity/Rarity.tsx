@@ -15,7 +15,7 @@ export default function Rarity(): JSX.Element {
 	// const { menu: menuList, onLogout } = props;
 	return (
 		<>
-			<section id="rarity" className={cn(s.root, 'rarity')}>
+			<section id="rarity" className={cn(s.root, "rarity")}>
 				<div className={s.rarity}>
 					<div className="container">
 						<div className="flexRow rarity">

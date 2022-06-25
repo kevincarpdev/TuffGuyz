@@ -20,7 +20,7 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 2em 100px;
-	border-bottom: 1px solid #B1B1B1;
+	border-bottom: 1px solid #b1b1b1;
 }
 .tableRow:last-of-type {
 	border-bottom: 0;
@@ -38,8 +38,6 @@
 	font-size: 1.1rem;
 	text-align: right;
 }
-
-
 
 @media screen and (max-width: 768px) {
 	.image {
