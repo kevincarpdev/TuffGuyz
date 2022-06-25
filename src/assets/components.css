@@ -52,22 +52,37 @@ section {
 	padding: 4em 0;
 }
 section h2:first-of-type {
-	font-size: 2.3rem;
+	font-size: 2rem;
 	font-weight: 500;
 	color: #000;
+	text-transform: uppercase;
 }
 .cardListing {
 	padding: 1em 0 3em;
 	text-align: center;
 }
-@media screen and (max-width: 1199px) {
-	.container {
-		padding: 0 2em;
-	}
+section.rarity h2:first-of-type{
+	color: #fff;
+	text-align: left;
 }
+
+
 @media screen and (max-width: 768px) {
 	.flexColumn,
 	.flexRow {
 		flex-direction: column;
+	}
+	.flexRow {
+		align-items: stretch;
+	}
+	section.rarity h2:first-of-type{ 
+		text-align: center;
+		margin: 0 0 1em;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.container {
+		padding: 0 2em;
 	}
 }
