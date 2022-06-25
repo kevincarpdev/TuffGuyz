@@ -3,7 +3,6 @@ import s from "./Timeline.module.css";
 import cn from "classnames";
 
 export default function Timeline(): JSX.Element {
-
 	return (
 		<>
 			<section id="about" className={cn(s.root)}>

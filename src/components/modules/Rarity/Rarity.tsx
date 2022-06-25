@@ -3,8 +3,6 @@ import s from "./Rarity.module.css";
 import cn from "classnames";
 import RarityImage from "../../../assets/img/rarity.png";
 
-
-
 export default function Rarity(): JSX.Element {
 	return (
 		<>

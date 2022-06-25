@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
-// import { useSnackbar } from "notistack";
 import "../../assets/scss/_tuff.scss";
+// import { useSnackbar } from "notistack";
 
-export default function Fuse(
-): JSX.Element {
+export default function Fuse(): JSX.Element {
 	// const { user, setUserData, loading } = props;
 	// const { enqueueSnackbar } = useSnackbar();
 	// const onUpdateUserData = async () => {

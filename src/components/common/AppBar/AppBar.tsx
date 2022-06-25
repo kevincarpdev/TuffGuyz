@@ -11,7 +11,6 @@ export default function CustomAppBar(
 	const { onLogout } = props;
 	const { web3Accounts } = useContext(Web3Context);
 
-
 	return (
 		<>
 			<div className={cn(s.menuBar)}>

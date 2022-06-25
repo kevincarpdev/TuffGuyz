@@ -15,8 +15,7 @@ import ExtraImagesMarquee from "../../components/modules/ExtraImagesMarquee";
 
 // import Mission from "../../components/modules/Mission";
 
-export default function Dashboard(
-): JSX.Element {
+export default function Dashboard(): JSX.Element {
 	return (
 		<>
 			<main>
