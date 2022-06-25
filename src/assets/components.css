@@ -61,12 +61,13 @@ section h2:first-of-type {
 	text-align: center;
 }
 @media screen and (max-width: 1199px) {
-	.container{
+	.container {
 		padding: 0 2em;
 	}
 }
 @media screen and (max-width: 768px) {
-	.flexColumn, .flexRow {
+	.flexColumn,
+	.flexRow {
 		flex-direction: column;
 	}
 }
