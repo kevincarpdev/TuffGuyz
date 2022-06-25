@@ -73,7 +73,6 @@
 	background-color: #fff;
 	color: #ff5858;
 	transition: all 0.3s ease-in-out;
-	
 }
 .socialNav li a svg {
 	width: 20px;
@@ -88,7 +87,8 @@
 	.root {
 		gap: 0;
 	}
-	.footerLinks, .root {
+	.footerLinks,
+	.root {
 		flex-direction: column;
 	}
 	.footerLinks {
