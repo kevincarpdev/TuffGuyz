@@ -28,6 +28,7 @@ button {
 	color: #fff;
 	font-family: var(--font-serif);
 	font-weight: 500;
+	transition: all 0.2s ease-in-out;
 }
 .button:hover {
 	background-color: #fff;
@@ -98,5 +99,13 @@ footer {
 @media screen and (max-width: 1199px) {
 	.container {
 		padding: 0 2em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container.hero {
+		padding: 0;
+		height: 100%;
+		min-height: 50vh;
 	}
 }

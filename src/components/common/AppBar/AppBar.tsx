@@ -4,6 +4,7 @@ import { Web3Context } from "../../../context/Web3Context";
 import Logo from "../../../assets/img/logo.png";
 import s from "./AppBar.module.css";
 import cn from "classnames";
+import { shortenHex } from "../../../util";
 
 export default function CustomAppBar(
 	props: InferProps<typeof CustomAppBar.propTypes>,
@@ -41,7 +42,7 @@ export default function CustomAppBar(
 				</div>
 				<div className="wallet">
 					<button className="button" onClick={onLogout}>
-						{web3Accounts.length > 0 && ` (${web3Accounts[0]})`}
+						{web3Accounts.length > 0 && ` (${shortenHex(web3Accounts[0], 4)})`}
 					</button>
 				</div>
 			</div>

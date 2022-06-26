@@ -9,7 +9,6 @@
 	align-items: center;
 	background-color: transparent;
 }
-
 .mainNav {
 	display: flex;
 	flex-direction: row;
@@ -26,8 +25,9 @@
 	text-transform: uppercase;
 	font-family: var(--font-sans);
 	font-size: 1.2rem;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	opacity: 1;
 }
-.mainNavList a:hover {
-	transform: scale(1.2);
+.mainNavList > li > a:hover {
+	opacity: 0.7;
 }

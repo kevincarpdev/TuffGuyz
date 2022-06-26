@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "../../components/modules/Hero";
-import Timeline from "../../components/modules/Timeline";
 import Card from "../../components/modules/Card";
 import TeamCard from "../../components/modules/TeamCard";
 import FusionImage from "../../assets/img/fusion.gif";
@@ -12,7 +11,7 @@ import NickImage from "../../assets/img/nick.png";
 import JelloImage from "../../assets/img/jello.png";
 import Footer from "../../components/common/Footer";
 import ExtraImagesMarquee from "../../components/modules/ExtraImagesMarquee";
-
+// import Timeline from "../../components/modules/Timeline";
 // import Mission from "../../components/modules/Mission";
 
 export default function Dashboard(): JSX.Element {
@@ -21,7 +20,7 @@ export default function Dashboard(): JSX.Element {
 			<main>
 				<Hero />
 				{/* <Mission /> */}
-				<Timeline />
+				{/* <Timeline /> */}
 				<section id="utility" className="off-white">
 					<h2>Utility</h2>
 					<div className="cardListing">
