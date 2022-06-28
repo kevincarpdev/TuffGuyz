@@ -5,6 +5,7 @@ import cn from "classnames";
 import Marquee from "react-fast-marquee";
 import HeroLeft from "../../../assets/img/hero-left.png";
 import HeroRight from "../../../assets/img/hero-right.png";
+
 import MobileMarqueeImage1 from "../../../assets/img/heromobile1.png";
 import MobileMarqueeImage2 from "../../../assets/img/heromobile2.png";
 import MobileMarqueeImage3 from "../../../assets/img/heromobile3.png";
