@@ -37,9 +37,6 @@ export default function Fuse(): JSX.Element {
 	// 	}
 	// };
 
-
-
-
 	function next(item: string) {
 		const next_num = dressupState[item].current + 1;
 		// if next_num exceeds total, restart (set current to 0)
@@ -97,7 +94,6 @@ export default function Fuse(): JSX.Element {
 		const tuffGuys = [];
 		const syncedMetadata = [];
 
-
 		for (let x = 0; x < counter; x++) {
 			const obj = JSON.parse(NFTs.result[x].metadata);
 			syncedMetadata.push(obj);
@@ -105,15 +101,12 @@ export default function Fuse(): JSX.Element {
 		}
 		console.log("Meta Data: ", syncedMetadata);
 		console.log("Tuff Guys: ", tuffGuys);
-
 	};
 
 	useEffect(() => {
-
 		if (!isWeb3Enabled) return;
-		fetchAllTokenIds()
+		fetchAllTokenIds();
 	}, [isWeb3Enabled]);
-
 
 	return (
 		<Grid
