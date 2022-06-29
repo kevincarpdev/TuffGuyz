@@ -6,8 +6,6 @@ import "../../assets/scss/_tuff.scss";
 import CharBuilder from "../../components/modules/CharBuilder";
 
 export default function Fuse(): JSX.Element {
-
-
 	return (
 		<Grid
 			className="container"

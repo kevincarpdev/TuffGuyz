@@ -3,13 +3,13 @@
 	padding: 4em 0;
 }
 .stepPanel {
-	position:relative;
+	position: relative;
 	border-radius: 40px;
 	padding: 0;
 	text-align: center;
 	width: 600px;
 	height: auto;
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 .frame {
 	display: flex;
@@ -22,7 +22,8 @@
 	position: absolute;
 	top: 0;
 }
-.frame, .bgImage {
+.frame,
+.bgImage {
 	border-radius: 30px;
 }
 .bgImage {
@@ -55,14 +56,15 @@ img {
 	padding: 1em 0;
 	border: 1px solid #374151;
 }
-.fuseStage, .nftRow {
+.fuseStage,
+.nftRow {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 .nftRow {
 	padding: 2em 0;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	gap: 0 2em;
 	margin: 1em 0 0;
 }
@@ -81,7 +83,7 @@ img {
 }
 .nftItem:hover {
 	cursor: pointer;
-	opacity: 1.0;
+	opacity: 1;
 	transform: scale(1.2);
 }
 .traitSliders {

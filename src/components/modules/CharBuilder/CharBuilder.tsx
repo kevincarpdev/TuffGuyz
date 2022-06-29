@@ -6,8 +6,8 @@ import { useSnackbar } from "notistack";
 // import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/swiper-bundle.min.css'
-import 'swiper/swiper.min.css'
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 import Background from "../../../assets/img/traits/Backgrounds/Blue Doodles.png";
 import Skin from "../../../assets/img/traits/Colors/Blue Skin.png";
@@ -17,8 +17,7 @@ import Tears from "../../../assets/img/traits/Tears/Tears 6.png";
 import Headwear from "../../../assets/img/traits/Headwear/Army Helmet.png";
 import LiquidBeard from "../../../assets/img/traits/Mouthwear/Mouthwear colors/Liquid Beard Pink.png";
 import Emperor from "../../../assets/img/traits/Clothes/Emperor.png";
-import { FaQuestion } from 'react-icons/fa';
-
+import { FaQuestion } from "react-icons/fa";
 
 export default function Hero(): JSX.Element {
 	const { isWeb3Enabled } = useMoralis();
@@ -106,16 +105,20 @@ export default function Hero(): JSX.Element {
 		console.log("Meta Data: ", syncedMetadata);
 		console.log("Tuff Guys: ", tuffGuys);
 	};
-	
 
 	useEffect(() => {
-		if (!isWeb3Enabled) { enqueueSnackbar("Please connect to MetaMask and refresh.", { variant: "error" }); return }
+		if (!isWeb3Enabled) {
+			enqueueSnackbar("Please connect to MetaMask and refresh.", {
+				variant: "error",
+			});
+			return;
+		}
 		fetchAllTokenIds();
 	}, [isWeb3Enabled]);
 
 	return (
 		<>
-			<section id="builder" className={cn(s.root,)}>
+			<section id="builder" className={cn(s.root)}>
 				<div className="container">
 					<div className={s.fuseWindow}>
 						<div className={s.fuseRow}>
@@ -146,11 +149,7 @@ export default function Hero(): JSX.Element {
 										{Object.keys(dressupState).map((item) => (
 											<div className={s.traitItem}>
 												<h4>{item}</h4>
-												<Swiper
-													navigation
-													spaceBetween={10}
-													slidesPerView={3}
-												>
+												<Swiper navigation spaceBetween={10} slidesPerView={3}>
 													<SwiperSlide>
 														{/* <input
 													className="button"
@@ -160,20 +159,24 @@ export default function Hero(): JSX.Element {
 													id={"next"}
 													onClick={() => next(item)}
 												/> */}
-														<div><h5>{item} #1</h5></div>
+														<div>
+															<h5>{item} #1</h5>
+														</div>
 													</SwiperSlide>
 													<SwiperSlide>
-														<div><h5>{item} #2</h5></div>
+														<div>
+															<h5>{item} #2</h5>
+														</div>
 													</SwiperSlide>
 													<SwiperSlide>
-														<div><h5>{item} #3</h5></div>
+														<div>
+															<h5>{item} #3</h5>
+														</div>
 													</SwiperSlide>
 												</Swiper>
 											</div>
 										))}
 									</div>
-
-
 
 									<input
 										className="button"
@@ -198,7 +201,6 @@ export default function Hero(): JSX.Element {
 							</div>
 						</div>
 					</div>
-					
 				</div>
 			</section>
 		</>
